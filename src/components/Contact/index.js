@@ -126,17 +126,29 @@ const Contact = () => {
 
   //hooks
   const [open, setOpen] = React.useState(false);
+  const [snackbarMessage, setSnackbarMessage] = React.useState("");
+  const [snackbarSeverity, setSnackbarSeverity] = React.useState("success");
   const form = useRef();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    emailjs.sendForm('service_j396p0c', 'template_zqyfmy3', form.current, '-jFaWDcBVh1nmqweD')
-      .then((result) => {
-        setOpen(true);
-        form.current.reset();
-      }, (error) => {
-        console.log(error.text);
-      });
+    emailjs.sendForm(
+      'service_076zl07',         // Your service ID
+      'template_xq3dkdf',        // Your template ID
+      form.current,              // The form reference
+      'ANd39h_iVn3DJHNkY'        // Your public key
+    )
+    .then((result) => {
+      setSnackbarMessage("Email sent successfully!");
+      setSnackbarSeverity("success");
+      setOpen(true);
+      form.current.reset();
+    }, (error) => {
+      setSnackbarMessage("Failed to send email. Please try again later.");
+      setSnackbarSeverity("error");
+      setOpen(true);
+      console.log(error.text);
+    });
   }
 
 
@@ -159,8 +171,10 @@ const Contact = () => {
           open={open}
           autoHideDuration={6000}
           onClose={()=>setOpen(false)}
-          message="Email sent successfully!"
-          severity="success"
+          message={snackbarMessage}
+          ContentProps={{
+            style: { backgroundColor: snackbarSeverity === "success" ? "#43a047" : "#d32f2f", color: "#fff" }
+          }}
         />
       </Wrapper>
     </Container>

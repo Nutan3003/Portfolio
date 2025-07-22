@@ -1,7 +1,7 @@
 
 export const Bio = {
   name: "Nutan Kate",
-  roles: ["Java Developer"],
+  roles: ["Full Stack Developer"],
   description:
     "I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning, I am dedicated to delivering high-quality results. With a positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things.",
   github: "https://github.com/Nutan3003",
@@ -15,12 +15,12 @@ export const skills = [
   {
     title: "Languages, Frameworks & Database",
     skills: [
-      { name: "Java", image: "https://github.com/devicons/devicon/blob/v2.16.0/icons/java/java-original-wordmark.svg" },
-      { name: "Python", image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" },
+      { name: "Java", image: "https://i.postimg.cc/tRWtBzVH/java.png" },
+      { name: "Python", image: "https://i.postimg.cc/yxDqzbqn/puthon.jpg" },
       { name: "SQL", image: "https://symbols.getvecta.com/stencil_28/61_sql-database-generic.90b41636a8.png" },
       { name: "MySQL", image: "https://cdn-icons-png.flaticon.com/512/919/919836.png" },
       { name: "MongoDB", image: "https://w7.pngwing.com/pngs/956/695/png-transparent-mongodb-original-wordmark-logo-icon-thumbnail.png" },
-      { name: "Oracle", image: "https://media.licdn.com/dms/image/D5612AQGTzGGnu886Vw/article-cover_image-shrink_720_1280/0/1680581578662" },
+      { name: "Oracle", image: "https://i.postimg.cc/Jz5RxSRB/ORACL.png" },
     ],
   },
   {
@@ -30,14 +30,24 @@ export const skills = [
       { name: "GitHub", image: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" },
       { name: "VS Code", image: "https://img.icons8.com/?size=48&id=0OQR1FYCuA9f&format=png" },
       { name: "AWS", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/AWS_Simple_Icons_AWS_Cloud.svg/2560px-AWS_Simple_Icons_AWS_Cloud.svg.png" },
+      { name: "Figma(UI Design)", image: "https://i.postimg.cc/KjSWdvNc/FIGMA.jpg" }
     ],
   },
   {
     title: "Engineering Practices",
     skills: [
       { name: "Cloud Computing", image: "https://cdn-icons-png.flaticon.com/512/4215/4215831.png" },
+      { name: "Firebase", image: "https://i.postimg.cc/8zS1hTgS/FIRE.jpg" },
       { name: "Microservices", image: "https://runestone.academy/ns/books/published/py4e-int/_images/web_crawler.png" },
       { name: "Prompt Engineering", image: "https://businessolution.org/wp-content/uploads/2023/02/Prompt-Engineering.png" },
+    ],
+  },
+  {
+    title: "FrameWork",
+    skills: [
+      { name: "Spring", image: "https://i.postimg.cc/Zn8QZt78/sprig.jpg" },
+      { name: "ReactJS", image: "https://i.postimg.cc/mDJ4hsyK/REACT.png" },
+      
     ],
   },
 ];
