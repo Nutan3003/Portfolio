@@ -109,7 +109,20 @@ export const projects = [
       "The Hospital Management System is a Java-based application that streamlines and automates various hospital operations, including patient registration, doctor scheduling, inventory management, and report generation. This system provides a user-friendly interface and ensures secure and efficient data management.",
     image: "https://static.vecteezy.com/system/resources/thumbnails/018/794/309/small_2x/health-insurance-concept-with-words-coverage-protection-risk-and-security-online-medicine-on-a-virtual-screen-and-a-cartoon-wood-hand-touching-a-button-isolated-on-blue-background-3d-rendering-png.png",//"https://drive.google.com/uc?export=view&id=1sJPAhqQeSK0F7RRsiIBK--S73Ij9AJc2",
     tags: ["Java", "Mysql", "Github", "Google Auth"],
-    category: "web app",
+    category: "Java",
     github: "https://github.com/Nutan3003/Hospital-Management-System",
+  },
+
+   {
+    id: 4,
+    title: "Real-Time Whiteboard",
+    date: "2025-04-03",
+    description:
+      "Created collaborative whiteboard using Vanilla JS, HTML, CSS with real-time sync using Socket.io..",
+    image: "https://cdn.speechi.com/wp-content/uploads/2023/08/features-interactive-whiteboard.jpg",
+    tags: ["Javascript", "HTML", "Github", "CSS"],
+    category: "web app",
+    github: "https://github.com/Nutan3003/RealTime_WhiteBoard",
+    webapp: "https://realtime-whiteboard-kr7s.onrender.com/",
   },
 ];

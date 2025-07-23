@@ -128,10 +128,20 @@ const Contact = () => {
   const [open, setOpen] = React.useState(false);
   const [snackbarMessage, setSnackbarMessage] = React.useState("");
   const [snackbarSeverity, setSnackbarSeverity] = React.useState("success");
+  const [fromEmail, setFromEmail] = React.useState("");
+  const [fromName, setFromName] = React.useState("");
+  const [subject, setSubject] = React.useState("");
+  const [message, setMessage] = React.useState("");
   const form = useRef();
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!fromEmail || !fromName || !subject || !message) {
+      setSnackbarMessage("Please fill in all the information");
+      setSnackbarSeverity("error");
+      setOpen(true);
+      return;
+    }
     emailjs.sendForm(
       'service_076zl07',         // Your service ID
       'template_xq3dkdf',        // Your template ID
@@ -143,6 +153,10 @@ const Contact = () => {
       setSnackbarSeverity("success");
       setOpen(true);
       form.current.reset();
+      setFromEmail("");
+      setFromName("");
+      setSubject("");
+      setMessage("");
     }, (error) => {
       setSnackbarMessage("Failed to send email. Please try again later.");
       setSnackbarSeverity("error");
@@ -161,10 +175,10 @@ const Contact = () => {
         <Desc>Feel free to reach out to me for any questions or opportunities!</Desc>
         <ContactForm ref={form} onSubmit={handleSubmit}>
           <ContactTitle>Email Me 🚀</ContactTitle>
-          <ContactInput placeholder="Your Email" name="from_email" />
-          <ContactInput placeholder="Your Name" name="from_name" />
-          <ContactInput placeholder="Subject" name="subject" />
-          <ContactInputMessage placeholder="Message" rows="4" name="message" />
+          <ContactInput placeholder="Your Email" name="from_email" value={fromEmail} onChange={e => setFromEmail(e.target.value)} />
+          <ContactInput placeholder="Your Name" name="from_name" value={fromName} onChange={e => setFromName(e.target.value)} />
+          <ContactInput placeholder="Subject" name="subject" value={subject} onChange={e => setSubject(e.target.value)} />
+          <ContactInputMessage placeholder="Message" rows="4" name="message" value={message} onChange={e => setMessage(e.target.value)} />
           <ContactButton type="submit" value="Send" />
         </ContactForm>
         <Snackbar
